@@ -27,7 +27,7 @@ def store_to_db(_data):
     try:
         if not exists_check(_data):
             
-            cursor.execute('insert into pwm values(%s,%s,%s,%s);',(_data[0],_data[1],_data[2],_data[3]))
+            cursor.execute('insert into pwm values(%s,%s,%s);',(_data[0],_data[1],_data[2]))
             obj.commit()
             print('Saved Successfully')
         else:
